@@ -3,4 +3,10 @@ include *.rst
 graft src
 recursive-include docs LICENSE.*
 
+include *.py
+include .coveragerc
+include buildout.cfg
+include travis.cfg
+recursive-include docs *.png
+
 global-exclude *.pyc
