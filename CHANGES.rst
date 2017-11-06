@@ -3,7 +3,7 @@ Changelog
 
 There's a frood who really knows where his towel is.
 
-1.0rc2 (unreleased)
+1.1+enfold1 (2017-11-06)
 ^^^^^^^^^^^^^^^^^^^
 
 - Make portlet compatible with Plone5
