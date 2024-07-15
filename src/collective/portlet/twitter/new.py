@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
-from cgi import escape
-from zope.interface import implements
+from html import escape
+from zope.interface import implementer
 
 from plone.portlets.interfaces import IPortletDataProvider
 from plone.app.portlets.portlets import base
 
 from zope import schema
-
-from zope.formlib import form
 
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
@@ -85,6 +83,7 @@ class IWidgetNewPortlet(IPortletDataProvider):
                            required=False)
 
 
+@implementer(IWidgetNewPortlet)
 class Assignment(base.Assignment):
     """Portlet assignment.
 
@@ -92,7 +91,6 @@ class Assignment(base.Assignment):
     with columns.
     """
 
-    implements(IWidgetNewPortlet)
     data_id = u""
     twitter = u""
     tweet_limit = None
@@ -196,7 +194,6 @@ class AddForm(base.AddForm):
     zope.formlib which fields to display. The create() method actually
     constructs the assignment that is being added.
     """
-    form_fields = form.Fields(IWidgetNewPortlet)
     schema = IWidgetNewPortlet
     label = _(u"Add Twitter Widget Portlet")
     description = _(u"This portlet displays an Embedded Timeline Twitter widget. Create a widget using the Twitter widgets page (https://twitter.com/settings/widgets) first.")
@@ -211,7 +208,6 @@ class EditForm(base.EditForm):
     This is registered with configure.zcml. The form_fields variable tells
     zope.formlib which fields to display.
     """
-    form_fields = form.Fields(IWidgetNewPortlet)
     schema = IWidgetNewPortlet
     label = _(u"Edit Twitter Widget Portlet")
     description = _(u"This portlet displays an Embedded Timeline Twitter widget. Create a widget using the Twitter widgets page (https://twitter.com/settings/widgets) first.")

@@ -3,10 +3,11 @@ Changelog
 
 There's a frood who really knows where his towel is.
 
-1.1+enfold2 (unreleased)
+2.0+enfold2 (unreleased)
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Nothing changed yet.
+- Remove support for python 2 and plone < 5.2. Add support for python3 and plone 5.2 and 6.0
+  [enfold-josh]
 
 
 1.1+enfold1 (2017-11-06)
@@ -55,9 +56,9 @@ There's a frood who really knows where his towel is.
   [davidjb]
 - Add titles and descriptions to the portlet add and edit pages.
   [davidjb]
-- Remove tal:attributes specification from Twitter link in portlet page 
+- Remove tal:attributes specification from Twitter link in portlet page
   template. This is already handled by the HTML tag creation code, and lead
-  to rendering failure in some cases (see 
+  to rendering failure in some cases (see
   https://bugs.launchpad.net/zope2/+bug/1004588).
   [davidjb]
 

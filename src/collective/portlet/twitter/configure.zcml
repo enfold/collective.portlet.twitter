@@ -7,7 +7,6 @@
     i18n_domain="collective.portlet.twitter">
 
     <five:registerPackage package="." />
-    <includeDependencies package="." />
     <i18n:registerTranslations directory="locales" />
 
     <genericsetup:registerProfile
